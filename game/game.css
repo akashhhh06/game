@@ -1,0 +1,55 @@
+body {
+    background: #222;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: #333;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px #0008;
+}
+
+canvas {
+    background: #111;
+    border: 2px solid #fff;
+    margin-bottom: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+button#restartBtn {
+    padding: 8px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #5bc85b;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    transition: background 0.2s;
+}
+button#restartBtn:hover {
+    background: #4ab04a;
+}
+
+#score {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
