@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1>JavaScript Alphabet Checker</h1></center><br>
+    <center><p>Enter a single alphabet character:</p></center>
+    <center><input type="text" id="alphabetInput" placeholder="Enter an alphabet"></center>
+    <center><button onclick="checkAlphabet()">Check Alphabet</button></center>
+    <center><p id="result"></p></center>
+    <script>
+        function checkAlphabet() {
+            const input = document.getElementById('alphabetInput').value;
+            const resultElement = document.getElementById('result');
+
+            if (!/^[a-zA-Z]+$/.test(input)) {
+                resultElement.textContent = "Please enter a valid alphabet character.";
+                return;
+            }
+
+            resultElement.textContent = "Valid alphabet character.";
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #4000ff;
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+        p {
+            color: #020109;
+        }
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
