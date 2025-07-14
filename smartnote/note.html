@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Note App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="note.css">
+  <!-- jsPDF for PDF export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Smart Note</h1>
+    <button id="themeToggle" title="Toggle Theme">🌗</button>
+  </header>
+  <main>
+    <section id="noteInputSection">
+      <input id="noteTitle" type="text" placeholder="Title" maxlength="64" />
+      <div id="toolbar">
+                <button data-cmd="bold"><b>B</b></button>
+        <button data-cmd="italic"><i>I</i></button>
+        <button data-cmd="underline"><u>U</u></button>
+        <button data-cmd="hiliteColor" data-value="green" title="Highlight">🖍️</button>
+        <input type="color" id="colorPicker" title="Text color"/>
+        <input type="file" id="imageInput" accept="image/*" title="Attach image"/>
+      </div>
+      <div id="noteBody" contenteditable="true" placeholder="Write your note here..."></div>
+      <button id="addNoteBtn">Add Note</button>
+    </section>    <section id="searchSection">
+      <input id="searchInput" type="text" placeholder="Search notes...">
+    </section>
+    <section id="notesGrid"></section>
+  </main>
+  <script src="note.js"></script>
+</body>
+</html>
